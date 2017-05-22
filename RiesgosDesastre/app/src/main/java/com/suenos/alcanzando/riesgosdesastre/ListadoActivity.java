@@ -44,6 +44,7 @@ public class ListadoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         try {
+            //Log.d("Listado onCreate","Ingreso");
             super.onCreate(savedInstanceState);
 
             setContentView(R.layout.activity_listado);
@@ -64,8 +65,8 @@ public class ListadoActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                //Intent i = new Intent(getApplicationContext(), CrearUbicacionActivity.class);
-                Intent i = new Intent(getApplicationContext(), UbicacionActivity.class);
+                Intent i = new Intent(getApplicationContext(), CrearUbicacionActivity.class);
+                //Intent i = new Intent(getApplicationContext(), UbicacionActivity.class);
                 startActivity(i);
             }
         });

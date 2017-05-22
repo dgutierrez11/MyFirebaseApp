@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/lyContenido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Descripción" />
+
+        <EditText
+            android:id="@+id/txtDescripcion"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nivel" />
+
+        <Spinner
+            android:id="@+id/spNivel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Dirección" />
+
+        <EditText
+            android:id="@+id/txtDireccion"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"/>
+
+        <Button
+            android:id="@+id/btnCrear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sat"/>
+
+    </LinearLayout>
+
+
+
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/lyContenido"
+    tools:context="com.suenos.alcanzando.riesgosmanizales.MapUbiActivity" />
+
+
+
+
+    <Button
+        android:id="@+id/btMark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mark"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
+
+
+
+    <ZoomControls
+        android:id="@+id/zcZoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btMark"
+        android:layout_alignParentRight="true"
+
+        ></ZoomControls>
+
+</RelativeLayout>

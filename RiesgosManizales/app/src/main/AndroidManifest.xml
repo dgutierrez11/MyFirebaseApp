@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.suenos.alcanzando.riesgosdesastre">
+    package="com.suenos.alcanzando.riesgosmanizales">
 
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -8,7 +8,6 @@
          location permissions for the 'MyLocation' functionality. 
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -16,17 +15,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".MapaActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".CrearUbicacionActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -38,14 +27,23 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
+        <activity
+            android:name=".ListaActivity"
+            android:label="@string/title_activity_lista"
+            android:theme="@style/AppTheme.NoActionBar">
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
+
+                    <category android:name="android.intent.category.LAUNCHER" />
+                </intent-filter>
+        </activity>
 
         <activity
-            android:name=".UbicacionActivity"
-            android:label="@string/title_activity_ubicacion" />
-        <activity android:name=".VisualizarUbicacionActivity" />
-        <activity
-            android:name=".ListadoActivity"
-            android:label="@string/title_activity_mapa"></activity>
+            android:name=".MapUbiActivity"
+            android:label="@string/title_activity_map_ubi">
+
+        </activity>
+        <activity android:name=".ListadoActivity"></activity>
     </application>
 
 </manifest>

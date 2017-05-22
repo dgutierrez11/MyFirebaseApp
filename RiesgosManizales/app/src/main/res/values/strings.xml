@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Riesgos Manizales</string>
+    <string name="title_activity_map_ubi">Map</string>
+    <string name="title_activity_lista">ListaActivity</string>
+</resources>
