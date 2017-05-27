@@ -40,10 +40,9 @@
 
         <activity
             android:name=".MapUbiActivity"
-            android:label="@string/title_activity_map_ubi">
-
+            android:label="@string/title_activity_map_ubi"
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity android:name=".ListadoActivity"></activity>
     </application>
 
 </manifest>

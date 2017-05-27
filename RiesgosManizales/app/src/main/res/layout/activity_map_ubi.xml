@@ -1,14 +1,34 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+
 
     <LinearLayout
         android:id="@+id/lyContenido"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/lblFecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fecha"
+            android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/txtFecha"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/textView7"
@@ -47,13 +67,6 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"/>
-
-        <Button
-            android:id="@+id/btnCrear"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sat"/>
-
     </LinearLayout>
 
 
@@ -69,15 +82,12 @@
     tools:context="com.suenos.alcanzando.riesgosmanizales.MapUbiActivity" />
 
 
-
-
     <Button
-        android:id="@+id/btMark"
+        android:id="@+id/btnAccion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mark"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"/>
+        android:text="Sat"
+        android:layout_below="@+id/lyContenido"/>
 
 
 
@@ -85,9 +95,11 @@
         android:id="@+id/zcZoom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/btMark"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
 
         ></ZoomControls>
 
 </RelativeLayout>
+
+

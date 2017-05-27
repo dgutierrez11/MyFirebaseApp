@@ -6,5 +6,6 @@ package Entities;
 
 public enum Accion {
     Crear,
-    Actualizar
+    Actualizar,
+    Visualizar
 }

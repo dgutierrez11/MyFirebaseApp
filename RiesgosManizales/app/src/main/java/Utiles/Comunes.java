@@ -1,5 +1,7 @@
 package Utiles;
 
+import android.widget.Spinner;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -15,6 +17,18 @@ public class Comunes {
 
         f = dateFormat.format(fecha);
         return f;
+    }
+
+    public static int getIndexSpinner(Spinner spinner, String myString) {
+        int index = 0;
+
+        for (int i = 0; i < spinner.getCount(); i++) {
+            if (spinner.getItemAtPosition(i).toString().equalsIgnoreCase(myString)) {
+                index = i;
+                break;
+            }
+        }
+        return index;
     }
 }
 

@@ -8,7 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.ContextMenu;
-import android.view.DragEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,9 +21,9 @@ import android.widget.Toast;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Arrays;
 
 import Data.AccesoBaseDatos;
+import Entities.Accion;
 import Entities.ConexionBD;
 import Entities.Ubicacion;
 import Entities.UbicacionFiltros;
@@ -46,6 +45,9 @@ public class ListaActivity extends AppCompatActivity {
             setContentView(R.layout.activity_lista);
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
+
+
+
 
             FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
             fab.setOnClickListener(new View.OnClickListener() {
@@ -109,11 +111,12 @@ public class ListaActivity extends AppCompatActivity {
                 try {
                     Ubicacion ubicacion = listaUbicaciones.get(position);
 
-                    /*
-                    Intent i = new Intent(getApplicationContext(), VisualizarUbicacionActivity.class);
+
+                    Intent i = new Intent(getApplicationContext(), MapUbiActivity.class);
                     i.putExtra("ubicacion", (Serializable) ubicacion);
+                    i.putExtra("CurrentAccion", Accion.Visualizar);
                     startActivity(i);
-                    */
+
 
                     //Toast.makeText(getApplicationContext(), "PosicÃ³n seleccionada : " + ubicacion.getDescripcion(), Toast.LENGTH_LONG).show();
                 } catch (Exception ex) {
@@ -215,5 +218,11 @@ public class ListaActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "El registro no pudo ser eliminado", Toast.LENGTH_LONG).show();
 
         return true;
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        LlenarLista();
     }
 }
