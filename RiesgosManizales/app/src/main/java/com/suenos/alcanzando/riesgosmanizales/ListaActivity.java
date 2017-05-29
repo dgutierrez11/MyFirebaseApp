@@ -11,6 +11,7 @@ import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -23,7 +24,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Data.AccesoBaseDatos;
-import Entities.Accion;
 import Entities.ConexionBD;
 import Entities.Ubicacion;
 import Entities.UbicacionFiltros;
@@ -46,18 +46,17 @@ public class ListaActivity extends AppCompatActivity {
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
 
-
-
+            this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
             FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
             fab.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
 
-                    Intent i = new Intent(getApplicationContext(), MapUbiActivity.class);
+                    Intent i = new Intent(getApplicationContext(), CrearRegistroActivity.class);
+                    //Intent i = new Intent(getApplicationContext(), MapUbiActivity.class);
                     //i.putExtra("ubicacion", (Serializable) ubicacion);
                     startActivity(i);
-
 
                     Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
@@ -110,45 +109,15 @@ public class ListaActivity extends AppCompatActivity {
 
                 try {
                     Ubicacion ubicacion = listaUbicaciones.get(position);
-
-
-                    Intent i = new Intent(getApplicationContext(), MapUbiActivity.class);
+                    Intent i = new Intent(getApplicationContext(), MapVisualActivity.class);
                     i.putExtra("ubicacion", (Serializable) ubicacion);
-                    i.putExtra("CurrentAccion", Accion.Visualizar);
                     startActivity(i);
 
-
-                    //Toast.makeText(getApplicationContext(), "PosicÃ³n seleccionada : " + ubicacion.getDescripcion(), Toast.LENGTH_LONG).show();
                 } catch (Exception ex) {
                     Toast.makeText(getApplicationContext(), ex.getMessage(), Toast.LENGTH_LONG).show();
                 }
             }
         });
-
-        /*
-        lvUbicaciones.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Ubicacion ubicacion = listaUbicaciones.get(position);
-
-
-
-                Toast.makeText(getApplicationContext(), "Desde setOnItemSelectedListener seleccionada : " + ubicacion.getDescripcion(), Toast.LENGTH_LONG).show();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });*/
-
-/*
-        lvUbicaciones.setOnDragListener(new View.OnDragListener() {
-            @Override
-            public boolean onDrag(View v, DragEvent event) {
-                return false;
-            }
-        });*/
     }
 
     private void LlenarLista() {
@@ -222,7 +191,15 @@ public class ListaActivity extends AppCompatActivity {
 
     @Override
     protected void onResume() {
-        super.onResume();
-        LlenarLista();
+        try {
+            super.onResume();
+            LlenarLista();
+        }
+        catch (Exception ex) {
+            Toast.makeText(getApplicationContext(), ex.getMessage(), Toast.LENGTH_LONG).show();
+            Log.d("onCreate", ex.getMessage());
+        }
     }
+
+
 }

@@ -27,22 +27,25 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
+
         <activity
             android:name=".ListaActivity"
-            android:label="@string/title_activity_lista"
+            android:label="Listado de lugares"
             android:theme="@style/AppTheme.NoActionBar">
-                <intent-filter>
-                    <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-                    <category android:name="android.intent.category.LAUNCHER" />
-                </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-
         <activity
-            android:name=".MapUbiActivity"
-            android:label="@string/title_activity_map_ubi"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:name=".MapVisualActivity"
+            android:label="Ver Detalle"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CrearRegistroActivity"
+            android:label="@string/title_activity_crear_registro"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
