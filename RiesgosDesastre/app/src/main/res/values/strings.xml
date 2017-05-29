@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">RiesgosDesastre</string>
-    <string name="action_settings">Settings</string>
-    <string name="title_activity_ubicacion">Map</string>
-    <string name="title_activity_mapa">Map</string>
-</resources>
