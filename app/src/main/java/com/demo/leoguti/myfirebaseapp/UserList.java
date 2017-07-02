@@ -26,8 +26,10 @@ public class UserList extends AppCompatActivity {
     private final static String TAG = UserList.class.getSimpleName();
     ArrayList<User> dataModels;
     private ListView listaRegistros;
-    private static CustomAdapter adapter;
-    static final int CREATE_ALERT_REQUEST = 0;
+    //private static CustomAdapter adapter;
+    private  ArrayAdapter adapter;
+    List<String> listaUsernames = new ArrayList<>();
+    static final int CREATE_REQUEST = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +44,7 @@ public class UserList extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getBaseContext(), MainActivity.class);
-                startActivityForResult(intent, CREATE_ALERT_REQUEST);
+                startActivityForResult(intent, CREATE_REQUEST);
             }
         });
 
@@ -52,10 +54,8 @@ public class UserList extends AppCompatActivity {
         User user1 = new User();
         user1.setNombre("David");
         dataModels.add(user1);
-
-        List<String> listaUsernames = new ArrayList<>();
         listaUsernames.add("leoguti11");
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listaUsernames);
+        adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listaUsernames);
 
         listaRegistros.setAdapter(adapter);
        /*
@@ -65,20 +65,16 @@ public class UserList extends AppCompatActivity {
 
     protected void onActivityResult(int requestCode, int resultCode,
                                     Intent data) {
-     /*   if (requestCode == CREATE_ALERT_REQUEST) {
+        if (requestCode == CREATE_REQUEST) {
             if (resultCode == RESULT_OK) {
                 // A contact was picked.  Here we will just display it
                 // to the user.
                 //startActivity(new Intent(Intent.ACTION_VIEW, data));
-                Alerta alerta = (Alerta) data.getSerializableExtra("newAlert");
-                dataModels.add(alerta);
+                User newUser = (User) data.getSerializableExtra("newUser");
+                dataModels.add(newUser);
+                listaUsernames.add(newUser.getUsername());
                 adapter.notifyDataSetChanged();
             }
-        }*/
-    }
-
-    public void onDeleteAlerta(View view){
-        Toast toast = Toast.makeText(getApplicationContext(), "Delete", Toast.LENGTH_SHORT);
-        toast.show();
+        }
     }
 }

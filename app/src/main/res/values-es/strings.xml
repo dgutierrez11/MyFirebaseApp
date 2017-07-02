@@ -8,4 +8,7 @@
     <string name="registration">Registro de usuario</string>
     <string name="save">Guardar</string>
     <string name="title_toolbar_list">Lista de usuarios</string>
+    <string name="username">Nombre de usuario</string>
+    <string name="accept">Aceptar</string>
+    <string name="message_create_record">Usuario creado exitosamente</string>
 </resources>
