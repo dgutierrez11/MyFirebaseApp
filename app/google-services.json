@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "908983112066",
+    "firebase_url": "https://myfirebaseapp-10ec0.firebaseio.com",
+    "project_id": "myfirebaseapp-10ec0",
+    "storage_bucket": "myfirebaseapp-10ec0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:908983112066:android:0ba1349b4d609819",
+        "android_client_info": {
+          "package_name": "com.demo.leoguti.myfirebaseapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "908983112066-es6clmn5kgt8bsdg2mp07mf602njccmo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.demo.leoguti.myfirebaseapp",
+            "certificate_hash": "bb403bf8cff7487e425b95ee5f06fdbebcff4db8"
+          }
+        },
+        {
+          "client_id": "908983112066-857tfthhsohoclugu2votg4clgt1ir7n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhUgXrF_Mh-nKq0xSaO7RuFuwK0pV8Pwc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "908983112066-857tfthhsohoclugu2votg4clgt1ir7n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
