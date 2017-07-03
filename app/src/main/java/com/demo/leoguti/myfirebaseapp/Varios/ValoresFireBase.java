@@ -5,4 +5,6 @@ package com.demo.leoguti.myfirebaseapp.Varios;
  */
 
 public class ValoresFireBase {
+    public  final  static  String REFERENCE_USUARIOS = "ProyectoFirebase";
+
 }

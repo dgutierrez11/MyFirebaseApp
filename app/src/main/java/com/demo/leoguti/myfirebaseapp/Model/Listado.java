@@ -5,4 +5,14 @@ package com.demo.leoguti.myfirebaseapp.Model;
  */
 
 public class Listado {
+
+    private String usernames[];
+
+    public String[] getUsernames() {
+        return usernames;
+    }
+
+    public void setUsernames(String[] usernames) {
+        this.usernames = usernames;
+    }
 }
