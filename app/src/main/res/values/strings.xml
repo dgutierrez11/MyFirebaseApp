@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">User administration</string>
+    <string name="registration">User registration</string>
+    <string name="name">Name</string>
+    <string name="lastName">Last Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="save">Save</string>
+    <string name="title_toolbar_list">User List</string>
+    <string name="username">Nickname</string>
+    <string name="accept">Accept</string>
+    <string name="message_create_record">Succefully created user</string>
+    <string name="req_username">Username is required</string>
+    <string name="TitleActView">Visualize</string>
+    <string name="TitleRegisterUSer">User registration</string>
+    <string name="TitleListUser">User list</string>
+    <string name="message_update_record">Succefully update record</string>
+    <string name="validate_name">Value too large for the name</string>
+    <string name="validate_lastname">Value too large for the last name</string>
+    <string name="validate_email">Value too large for the email</string>
+    <string name="validate_password">Value too large for the password</string>
+    <string name="validate_username">Value too large for the username</string>
+</resources>

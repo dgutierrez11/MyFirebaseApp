@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Gestione utenti</string>
+    <string name="email">Posta</string>
+    <string name="lastName">Cognome</string>
+    <string name="name">Nome</string>
+    <string name="password">Password</string>
+    <string name="registration">Registrazione utente</string>
+    <string name="save">Salvare</string>
+    <string name="title_toolbar_list">Lista utenti</string>
+    <string name="username">Sopranome</string>
+    <string name="accept">confermare</string>
+    <string name="message_create_record">Utente creato con successo</string>
+    <string name="req_username">E richiesto  il none utente</string>
+    <string name="TitleActView">Vizzualizzare</string>
+    <string name="TitleRegisterUSer">Registrazione utente</string>
+    <string name="TitleListUser">Lista utenti</string>
+    <string name="message_update_record">Utente aggiornato con successo</string>
+    <string name="validate_name">Value too large for the name</string>
+    <string name="validate_lastname">Valore troppo grande per il cognome</string>
+    <string name="validate_email">Valore troppo grande per Posta</string>
+    <string name="validate_password">Valore troppo grande per la password</string>
+    <string name="validate_username">Valore troppo grande per il sopranome</string>
+</resources>
