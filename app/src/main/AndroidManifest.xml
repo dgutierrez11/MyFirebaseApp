@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
         <activity
             android:name=".UserList"
             android:theme="@style/AppTheme.NoActionBar">
@@ -19,7 +18,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".VisualizarActivity"></activity>
+        <activity android:name=".MainActivity"
+            android:parentActivityName=".UserList">
+        </activity>
+        <activity android:name=".VisualizarActivity"
+            android:parentActivityName=".UserList"></activity>
     </application>
 
 </manifest>

@@ -58,17 +58,6 @@ public class UserList extends AppCompatActivity {
         listaRegistros = (ListView) findViewById(R.id.lista_registro);
         dataModels= new ArrayList<>();
 
-        User user1 = new User();
-        user1.setNombre("David");
-        dataModels.add(user1);
-        //listaUsernames.add("leoguti11");
-        //adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listaUsernames);
-
-        //listaRegistros.setAdapter(adapter);
-       /*
-        adapter = new CustomAdapter(dataModels,getApplicationContext());
-        listaRegistros.setAdapter(adapter);*/
-
         CrearEventoLista();
         VisualizarRegistros();
     }
